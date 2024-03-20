@@ -53,9 +53,9 @@ const Dashborad = (children) => {
                                                 <span>SuperAdmin</span>
                                             )
                                         }
-                                        else if(RoleUser === ""){
+                                        else if(RoleUser === "user"){
                                             return (
-                                                <span>SuperAdmin</span>
+                                                <span>User</span>
                                             )
                                         }
                                     })()
