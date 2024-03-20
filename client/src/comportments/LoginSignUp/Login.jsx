@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -8,7 +9,13 @@ const Login = () => {
         email: '',
         password: ''
     }) 
-    
+
+    const headleSubmit = (e) =>{
+        e.preventDefault();
+        axios.post('http://localhost:8081/Login')
+    }
+
+
 
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
@@ -17,16 +24,16 @@ const Login = () => {
                 <h1 className="text-3xl font-semibold">Login Here</h1>
                 
                 <div className="pl-4">
-                    <form>
+                    <form onSubmit={headleSubmit}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
                             <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' name='email' 
-                            />
+                            onChange={e => SetLoginData({...LoginData, email:e.target.value})}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
                             <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' name='password' 
-                            />
+                            onChange={e => SetLoginData({...LoginData, password:e.target.value})}/>
                         </div>
                         <div className="my-4">
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
