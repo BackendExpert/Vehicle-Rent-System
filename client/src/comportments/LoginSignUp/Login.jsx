@@ -12,7 +12,15 @@ const Login = () => {
 
     const headleSubmit = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:8081/Login')
+        try{
+            const res = axios.post('http://localhost:8081/Login', {
+                email,
+                password
+            });
+        }
+        catch{
+            console.log(err)
+        }
     }
 
 
