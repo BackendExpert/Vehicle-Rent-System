@@ -1,7 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const navigate = useNavigate()
+
+    const [signupData, SetSignupData] = useState({
+        username: '',
+        email: '',
+        password: '',        
+    })
+    
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:py-24 lg:mx-40 py-16 mx-8">
