@@ -63,7 +63,7 @@ const Dashborad = (children) => {
                             </div>                    
                         </div>
                         <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
-                            <Link to={'/superAdmin'}>
+                            <Link to={'/Dashboard'}>
                                 {sideOpen ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
                             </Link>
                         </div>
@@ -74,10 +74,10 @@ const Dashborad = (children) => {
                         {
                             SuperAdminSide.map((superSide) => (
                                 <Link to={superSide.link}>
-                                <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                                    <p>{superSide.icon}</p>
-                                    <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{superSide.name}</p>                        
-                                </div>
+                                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                        <p>{superSide.icon}</p>
+                                        <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{superSide.name}</p>                        
+                                    </div>
                                 </Link>
                             ))
                         }
@@ -107,7 +107,7 @@ const Dashborad = (children) => {
                     </div>
                     {/* nav bar end */}
 
-                    <div className="bg-white mt-2 py-6 px-4 rounded border-l-4 border-blue-200">
+                    <div className="bg-white mt-2 py-6 px-4 rounded border-l-4 border-blue-200 shadow-xl">
                         hi alll
                     </div>
                 </div>
