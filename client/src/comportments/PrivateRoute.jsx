@@ -5,8 +5,8 @@ import  secureLocalStorage  from  "react-secure-storage";
 // Replace "isLoggedIn" with your actual authentication logic
 const isLoggedIn = () => {
   // Simulate checking for a token or logged-in state
-  return localStorage.getItem('Logintoken') !== null;
-  return secureLocalStorage.getItem('loginNew') !== null;
+  return localStorage.getItem('LoginToken') !== null;
+  return secureLocalStorage.getItem('Login1') !== null;
 
 };
 
