@@ -11,18 +11,22 @@ const Login = () => {
         password: ''
     }) 
 
-    const headleSubmit = (e) =>{
+    const headleSubmit = async (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:8081/Login', LoginData)
-        .then(res => {
+        try{
+            const res = await axios.post('http://localhost:8081/Login', LoginData)
+            
+            const loginToken = res.data.Token;
 
+            //store token in localstorage
+            localStorage.setItem('LoginToken', loginToken)
+            
 
-            if(res.data.Msg === "Success"){
-                const loginToken = res.data.token;
-                localStorage.setItem('LoginToken', loginToken);
-                
-            }
-        })
+        }        
+        catch(err){
+            console.log(err)
+        }
+
     }
 
 
