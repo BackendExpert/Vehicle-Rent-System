@@ -21,6 +21,26 @@ const Login = () => {
             //store token in localstorage
             localStorage.setItem('LoginToken', loginToken)
             
+            //get and store login user role and email
+            const userRole = res.data.LoginUser[0].role;
+            const userEmail = res.data.LoginUser[0].email;
+
+            //store data in localstore so that use secureLocalStorage
+            secureLocalStorage.setItem("Login1", userRole);
+            secureLocalStorage.setItem("login2", userEmail);
+
+            //login to system
+
+            if(res.data.Msg === "Success"){
+                if(res.data.LoginUser[0].is_active === 0){
+                    alert('Your Account has been Suspended. unauthorized activity has been detected.')
+                    localStorage.clear()
+                    navigate('/')
+                }
+                else{
+                    navigate('/Dashboard');
+                }
+            }
 
         }        
         catch(err){
