@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -18,19 +19,17 @@ const SignUp = () => {
 
     //send data to backend
     const headleSubmit = async (e) => {
-        e.e.preventDefault();
-        try{
-            const res = await axios.post('http://localhost:8081/register', {
-                username,
-                email,
-                password                
-            });
-
-            navigate('/');
-        }
-        catch (err){
-            console.log(err);
-        }
+        e.preventDefault();
+        axios.post('http://localhost:8081/register', signupData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("User Registation is Successful")
+                navigate('/')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
   return (
