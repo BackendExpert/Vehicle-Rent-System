@@ -16,6 +16,22 @@ const SignUp = () => {
     const onChange = (e) => 
     SetDataForm({...dataForm, [e.target.name]: e.target.value })
 
+    //send data to backend
+    const headleSubmit = async (e) => {
+        e.e.preventDefault();
+        try{
+            const res = await axios.post('http://localhost:8081/register', {
+                username,
+                email,
+                password                
+            });
+
+            navigate('/');
+        }
+        catch (err){
+            console.log(err);
+        }
+    }
 
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
@@ -24,7 +40,7 @@ const SignUp = () => {
                 <h1 className="text-3xl font-semibold">Register Here</h1>
                 
                 <div className="pl-4">
-                    <form>
+                    <form onSubmit={headleSubmit}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Name : </label>
                             <input type="text" className="my-2 w-full h-11 border rounded pl-2" name='username' required placeholder='Enter Name' 
