@@ -12,6 +12,14 @@ const resourceLimits = require('worker_threads');
 const app = express();
 const PORT = process.env.PORT || 8081
 
+//make connection between dbsever and node app
+
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "1234",
+    database: "db_vrs"
+})
 
 // middleware
 app.use(express.json())
