@@ -28,7 +28,6 @@ app.use(express.static('public'));
 
 //register endpoint
 app.post('/register', (req, res) => {
-    const {username, email, password} = req.body;
     //hash password
     bcrypt.hash(password, 10, (err, hashPass) => {
         if(err) throw err
@@ -40,6 +39,25 @@ app.post('/register', (req, res) => {
         //set role as user and is_active = 1
         userRole = 'user';
         is_active = 1;
+
+        const sql = "INSERT INTO users(email, username, password, role, create_at, update_at, is_active) VALUES (?)";
+        const values = [
+            req.body.email,
+            req.body.username,
+            hashPass,
+            userRole,
+            createTime,
+            updateTime,
+            is_active       
+        ]
+        connection.query(sql, [values], (err, result) => {
+            if(err){
+                return res.json({Error: "ERROR on SERVER"})
+            }
+            else{
+                return res.json({Status: "Success"})
+            }
+        })
     })
 })
 
