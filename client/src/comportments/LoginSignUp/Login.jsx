@@ -2,7 +2,13 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const navigate = useNavigate()
 
+    const [LoginData, SetLoginData] = useState({
+        email: '',
+        password: ''
+    }) 
+    
 
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
