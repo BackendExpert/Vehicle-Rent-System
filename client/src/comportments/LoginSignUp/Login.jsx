@@ -33,7 +33,7 @@ const Login = () => {
 
             if(res.data.Msg === "Success"){
                 if(res.data.LoginUser[0].is_active === 0){
-                    alert('Your Account has been Suspended. unauthorized activity has been detected.')
+                    alert('Your Account has been Suspended. Unauthorized activity has been detected.')
                     localStorage.clear()
                     navigate('/')
                 }
