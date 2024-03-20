@@ -39,6 +39,7 @@ const Dashborad = (children) => {
     return (
         <div className="bg-gray-200 py-6">
             <div className="flex">
+                {/* side menu start */}
                 <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl mx-2 rounded bg-white h-auto pl-4 py-4 ${sideOpen ? "w-72" : "w-20" }`}>
                     <div className="py-2">
                         <div className="flex">
@@ -67,7 +68,10 @@ const Dashborad = (children) => {
                     </div>
                 
                 </div>
-                
+                {/* side menu end */}
+                {/* nav bar start */}
+                    
+                {/* nav bar end */}
             </div>
         </div>
         
