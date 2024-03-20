@@ -31,7 +31,7 @@ app.post('/register', (req, res) => {
     console.log(req.body)
     //hash password
     bcrypt.hash(req.body.password, 10, (err, hashPass) => {
-        if(err) throw err
+        if(err) throw err;
 
         //get currnet data
         var createTime = new Date();
