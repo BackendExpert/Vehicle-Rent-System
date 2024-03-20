@@ -28,13 +28,15 @@ app.use(express.static('public'));
 
 //register endpoint
 app.post('/register', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
 
     const password = req.body.password;
 
     //hash password
     bcrypt.hash(password, 10, (err, hashPass) => {
         if(err) throw err;
+
+        // console.log(hashPass)
 
         //get currnet data
         var createTime = new Date();
