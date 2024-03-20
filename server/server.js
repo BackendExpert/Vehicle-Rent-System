@@ -28,8 +28,9 @@ app.use(express.static('public'));
 
 //register endpoint
 app.post('/register', (req, res) => {
+    console.log(req.body)
     //hash password
-    bcrypt.hash(password, 10, (err, hashPass) => {
+    bcrypt.hash(req.body.password, 10, (err, hashPass) => {
         if(err) throw err
 
         //get currnet data
