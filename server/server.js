@@ -80,9 +80,6 @@ app.post('/register', (req, res) => {
             }
         }
     })
-
-
-
 })
 
 //check the server is working
