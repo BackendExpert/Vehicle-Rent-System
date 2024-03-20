@@ -1,13 +1,16 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import  secureLocalStorage  from  "react-secure-storage"
 
-const Dashborad = () => {
+const Dashborad = (children) => {
     //for open and close Side bar
     const [sideOpen, SetsideOpen] = useState();
 
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
+
+    //-------Side Menus -------------
 
     //SuperAdmin Side list
     const SuperAdminSide = [
@@ -17,19 +20,58 @@ const Dashborad = () => {
         {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
     ]
 
-  return (
-    <div>
-        {
-            SuperAdminSide.map((superSide) => {
-                return (
-                    <div className="">
-                        {superSide.name}
+    //-------Side Menus End-------------
+    //-------Nav Menus -------------
+
+    //SuperAdmin Navbar
+    const SuperAdminNav = [
+        {name: "new User", link: "#"},
+        {name: "new User", link: "#"},
+        {name: "new User", link: "#"},
+        {name: "new User", link: "#"},
+        {name: "new User", link: "#"},
+        
+    ]
+
+    //-------Nav Menus -------------
+
+
+    return (
+        <div className="bg-gray-200 py-6">
+            <div className="flex">
+                <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl mx-2 rounded bg-white h-auto pl-4 py-4 ${sideOpen ? "w-72" : "w-20" }`}>
+                    <div className="py-2">
+                        <div className="flex">
+                        <div className="text-[#3B71CA] pt-1" onClick={() => SetsideOpen(!sideOpen)}><Icons size="large" name="menu"></Icons></div>
+                            <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!sideOpen && 'scale-0'}`}>SuperAdmin</div>                    
+                        </div>
+                        <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
+                            <Link to={'/superAdmin'}>
+                                {sideOpen ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
+                            </Link>
+                        </div>
+                        <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
                     </div>
-                )
-            })
-        }
-    </div>
-  )
+
+                    <div className="pl-2">
+                        {
+                            SuperAdminSide.map((superSide) => (
+                                <Link to={superSide.link}>
+                                <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                    <p>{superSide.icon}</p>
+                                    <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{superSide.name}</p>                        
+                                </div>
+                                </Link>
+                            ))
+                        }
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+        
+    )
 }
 
 export default Dashborad
