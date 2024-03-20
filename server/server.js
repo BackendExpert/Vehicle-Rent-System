@@ -89,7 +89,32 @@ app.post('/Login', (req, res) =>{
 
     const sql = "SELECT * FROM users WHERE email = ?"
     connection.query(sql, [req.body.email], (err, result) => {
-        
+        if(err) throw err
+
+        if(result.length > 0){
+            //compare password
+            const password = req.body.password;
+            bcrypt.compare(password, result[0].password, (err, passMatch) => {
+                if(err) throw err
+
+                if(passMatch){
+                    //generate JWT Token
+                    const token = jwt.sign(
+                        {email: result[0].email, role: result[0].role, is_active: result[0].is_active},
+                        'your-secret-key',
+                        {expiresIn: '1h'}
+                    );
+                    res.json({Token: token, Msg: "Success", LoginUser:result})
+                    console.log(result)
+                }
+                else{
+                    res.json({Error: "Password not Match "})
+                }
+            })
+        }
+        else{
+            res.json({Error: "User Does not Exists"})
+        }
     })
 })
 //check the server is working
