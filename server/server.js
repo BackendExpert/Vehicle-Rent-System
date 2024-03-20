@@ -82,5 +82,15 @@ app.post('/register', (req, res) => {
     })
 })
 
+
+//login Endpoint
+app.post('/Login', (req, res) =>{
+    console.log(req.body)
+
+    const sql = "SELECT * FROM users WHERE email = ?"
+    connection.query(sql, [req.body.email], (err, result) => {
+        
+    })
+})
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
