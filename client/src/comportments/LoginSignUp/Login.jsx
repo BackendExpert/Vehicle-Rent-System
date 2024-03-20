@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import  secureLocalStorage  from  "react-secure-storage"
 
 const Login = () => {
     const navigate = useNavigate()
@@ -12,15 +13,16 @@ const Login = () => {
 
     const headleSubmit = (e) =>{
         e.preventDefault();
-        try{
-            const res = axios.post('http://localhost:8081/Login', {
-                email,
-                password
-            });
-        }
-        catch{
-            console.log(err)
-        }
+        axios.post('http://localhost:8081/Login', LoginData)
+        .then(res => {
+
+
+            if(res.data.Msg === "Success"){
+                const loginToken = res.data.token;
+                localStorage.setItem('LoginToken', loginToken);
+                
+            }
+        })
     }
 
 
