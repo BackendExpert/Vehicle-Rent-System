@@ -1,7 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
+    const navigate = useNavigate()
+
+    const [signupData, SetSignupData] = useState({
+        username: '',
+        email: '',
+        password: '',        
+    })
+    //get data
+    const {username, email, password} = dataForm;
+
+    // make onChange 
+    const onChange = (e) => 
+    SetDataForm({...dataForm, [e.target.name]: e.target.value })
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:py-[150px] lg:mx-40 py-16 mx-8">

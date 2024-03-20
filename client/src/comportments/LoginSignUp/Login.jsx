@@ -2,14 +2,8 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    const navigate = useNavigate()
 
-    const [signupData, SetSignupData] = useState({
-        username: '',
-        email: '',
-        password: '',        
-    })
-    
+
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/wp2707503.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:py-24 lg:mx-40 py-16 mx-8">
@@ -20,11 +14,13 @@ const Login = () => {
                     <form>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' name='email' />
+                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' name='email' 
+                            />
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' name='password' />
+                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' name='password' 
+                            />
                         </div>
                         <div className="my-4">
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
