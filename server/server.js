@@ -26,7 +26,22 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('public')); 
 
+//register endpoint
+app.post('/register', (req, res) => {
+    const {username, email, password} = req.body;
+    //hash password
+    bcrypt.hash(password, 10, (err, hashPass) => {
+        if(err) throw err
 
+        //get currnet data
+        var createTime = new Date();
+        var updateTime = new Date();
+
+        //set role as user and is_active = 1
+        userRole = 'user';
+        is_active = 1;
+    })
+})
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
