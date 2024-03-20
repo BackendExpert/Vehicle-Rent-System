@@ -10,7 +10,7 @@ const Dashborad = (children) => {
 
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
-
+    // alert(RoleUser)
     //-------Side Menus -------------
 
     //SuperAdmin Side list
@@ -45,7 +45,22 @@ const Dashborad = (children) => {
                     <div className="py-2">
                         <div className="flex">
                         <div className="text-[#3B71CA] pt-1" onClick={() => SetsideOpen(!sideOpen)}><Icons size="large" name="menu"></Icons></div>
-                            <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!sideOpen && 'scale-0'}`}>SuperAdmin</div>                    
+                            <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!sideOpen && 'scale-0'}`}>
+                                {
+                                    (() => {
+                                        if(RoleUser === "SuperAdmin"){
+                                            return (
+                                                <span>SuperAdmin</span>
+                                            )
+                                        }
+                                        else if(RoleUser === ""){
+                                            return (
+                                                <span>SuperAdmin</span>
+                                            )
+                                        }
+                                    })()
+                                }                                     
+                            </div>                    
                         </div>
                         <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                             <Link to={'/superAdmin'}>
@@ -70,10 +85,10 @@ const Dashborad = (children) => {
                 
                 </div>
                 {/* side menu end */}
-                <div className="">
+                <div className="w-full mr-4">
                     {/* nav bar start */}
-                    <div className="flex justify-between border-b-4 border-blue-300 shadow-xl mt-4 bg-white py-4 px-6 rounded">
-                        NIFS
+                    <div className="flex justify-between border-b-4 border-blue-300 shadow-xl  bg-white py-4 px-6 rounded w-full">
+                        Vehicle Rent System
                         <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navOpen)}>
                             <Icons name={navOpen ? 'close' : 'menu'} ></Icons>
                         </div>
@@ -92,7 +107,7 @@ const Dashborad = (children) => {
                     </div>
                     {/* nav bar end */}
 
-                    <div className="">
+                    <div className="bg-white mt-2 py-6 px-4 rounded border-l-4 border-blue-200">
                         hi alll
                     </div>
                 </div>
