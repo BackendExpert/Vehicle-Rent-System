@@ -113,7 +113,18 @@ const Dashborad = (children) => {
                             {
                                 allUserSide.map((allside) => {
                                     if(RoleUser === "buyer"){
-                                        if(allside.id === 1 )
+                                        if(allside.id === 1 || allside.id === 2 || allside.id === 4 ){
+                                            return (
+                                                <Link to={allside.link}>
+                                                    <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                                        <p>{allside.icon}</p>
+                                                        <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{allside.name}</p>                        
+                                                    </div>
+                                                </Link>
+                                            )
+                                        }
+                                    }
+                                    else{
                                         return (
                                             <Link to={allside.link}>
                                                 <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
