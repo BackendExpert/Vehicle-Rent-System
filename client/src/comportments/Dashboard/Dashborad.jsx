@@ -35,7 +35,7 @@ const Dashborad = (children) => {
 
     //SuperAdmin Navbar
     const navBar = [
-        {name: "Notifications", link: "#", icon: <Icons name="notifications"></Icons>},
+        {name: "Notifications", link: "#", desc: "notifications", icon: <Icons name="notifications"></Icons>},
         {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},
         
     ]
@@ -132,16 +132,16 @@ const Dashborad = (children) => {
                                     if(nav.desc === "logout"){
                                         return (
                                             <div onClick={headlelogout} className="flex cursor-pointer text-red-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">
-                                                <p className="">{nav.icon}</p>
+                                                <p className="pt-[2px]">{nav.icon}</p>
                                                 <p className="pl-2">{nav.name}</p>
                                             </div>
                                         )
                                     }
-                                    else{
+                                    else if(nav.desc === "notifications"){
                                         return (
                                             <Link to={nav.link}>
                                                 <div className="flex cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">
-                                                    <p className="">{nav.icon}</p>
+                                                    <p className="pt-[2px]">{nav.icon}</p>                                                    
                                                     <p className="pl-2">{nav.name}</p>
                                                 </div>
                                             </Link>                            
