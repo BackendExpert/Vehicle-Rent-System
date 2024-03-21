@@ -17,6 +17,7 @@ const Dashborad = (children) => {
 
     //For all user Side list
     const allUserSide = [
+        {name: "Vehicles", link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
         {name: "Rented Vehicle", link: "#", icon: <Icons name="car-sport" size="large"></Icons>},
         {name: "Own Vehicle ", link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>},        
