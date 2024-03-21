@@ -13,11 +13,18 @@ const Dashborad = (children) => {
     // alert(RoleUser)
     //-------Side Menus -------------
 
+    //For all user Side list
+    const allUserSide = [
+        {name: "Rented Vehicle", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Own Vehicle ", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>},        
+    ]
+
     //SuperAdmin Side list
     const SuperAdminSide = [
-        {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Vehicles", link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Report", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Vehicles", link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Report", link: "#", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
     ]
 
