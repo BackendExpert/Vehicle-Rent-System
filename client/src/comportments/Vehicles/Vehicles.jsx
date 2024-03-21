@@ -13,7 +13,9 @@ const Vehicles = () => {
 
     }
     else{
-        
+        useEffect(() => {
+            navigate('/unauthorizedAccess');
+        }, [])
     }
   return (
     <div>Vehicles</div>
