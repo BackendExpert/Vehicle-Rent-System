@@ -141,6 +141,16 @@ app.post('/UnAccess', (req, res) => {
                 else{
                     if(result.length == 0){
                         const sql = "INSERT INTO unaccess(email, role, access_at) VALUES (?)";
+                        const access_at = new Date();
+
+                        connection.query(sql, [email, role, access_at], (err, result) =>{
+                            if(err){
+                                return res.json({Error: "ERROR on SERVER"})
+                            }
+                            else{
+                                return res.json({Message: "UnAccess Reported, The account has been suspended"})
+                            }
+                        })
                     }
                 }
             })
