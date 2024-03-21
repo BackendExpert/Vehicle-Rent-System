@@ -22,9 +22,24 @@ const Vehicles = () => {
                         <Link to={'/Dashboard'}>
                             <button className="px-16 py-3 rounded text-blue-500 font-semibold border border-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl"> Back </button>
                         </Link>
-                        <Link to={'/AddVehicles'}>
-                            <button className="px-16 py-3 rounded text-blue-500 font-semibold border border-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl"> Back </button>
-                        </Link>
+                        {
+                            (() => {
+                                if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "renter"){
+                                    return (
+                                        <Link to={'/AddVehicles'}>
+                                            <button className="ml-2 px-16 py-3 rounded text-green-500 font-semibold border border-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl"> Add New Vehicle </button>
+                                        </Link>
+                                    )
+                                }
+                                else{
+                                    return (
+                                        <div className=""></div>
+                                    )
+                                }
+                            })()
+                        }
+
+
                     </div>
                 </div>
             </div>
