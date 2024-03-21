@@ -11,7 +11,11 @@ const Vehicles = () => {
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "renter" || RoleUser === "buyer"){
         return (
-            <div className="bg-gray-200">Vehicles</div>
+            <div className="bg-gray-200 w-full py-8 px-6">
+                <div className="py-4 px-4 bg-white rounded border-l-4 border-blue-500 shadow-xl">
+                    <h1 className="text-xl pt-4">Vehicles</h1>
+                </div>
+            </div>
         )
     }
     else{
