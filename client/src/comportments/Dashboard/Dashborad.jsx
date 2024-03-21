@@ -38,8 +38,8 @@ const Dashborad = (children) => {
         {name: "new User", link: "#"},
         {name: "new User", link: "#"},
         {name: "new User", link: "#"},
-        {name: "new User", link: "#"},
-        {name: "Logout", desc: "logout"},
+        {name: "Notifications", link: "#", icon: <Icons name="notifications"></Icons>},
+        {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},
         
     ]
 
@@ -140,7 +140,10 @@ const Dashborad = (children) => {
                                     else{
                                         return (
                                             <Link to={nav.link}>
-                                                <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                                                <div className="flex cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">
+                                                    <p className="">{nav.icon}</p>
+                                                    <p className="pl-2">{nav.name}</p>
+                                                </div>
                                             </Link>                            
                                         )
                                     }
