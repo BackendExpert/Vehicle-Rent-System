@@ -140,7 +140,10 @@ const Dashborad = (children) => {
                                         return (
                                             <Link to={nav.link}>
                                                 <div className="flex cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">
-                                                    <p className="pt-[2px]">{nav.icon}</p>                                                    
+                                                    <div className="">
+                                                        <p className="pt-[2px]">{nav.icon}</p> 
+                                                        <span className="absolute bg-red-500 text-white rounded-full px-1 text-sm top-8 ml-1">15</span>
+                                                    </div>                                                   
                                                     <p className="pl-2">{nav.name}</p>
                                                 </div>
                                             </Link>                            
