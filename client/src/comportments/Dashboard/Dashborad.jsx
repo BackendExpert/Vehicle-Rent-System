@@ -16,8 +16,8 @@ const Dashborad = (children) => {
     //SuperAdmin Side list
     const SuperAdminSide = [
         {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Vehicles", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Report", link: "#", icon: <Icons name="person" size="large"></Icons>},
         {name: "Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
     ]
 
