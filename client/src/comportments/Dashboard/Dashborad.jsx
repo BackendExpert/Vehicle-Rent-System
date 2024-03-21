@@ -36,8 +36,7 @@ const Dashborad = (children) => {
     //SuperAdmin Navbar
     const navBar = [
         {name: "Notifications", link: "#", desc: "notifications", icon: <Icons name="notifications"></Icons>},
-        {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},
-        
+        {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},        
     ]
 
     //-------Nav Menus End -------------
