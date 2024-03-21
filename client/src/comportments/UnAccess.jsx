@@ -11,8 +11,8 @@ function UnAccess (){
     // const email = secureLocalStorage.getItem("logiafter");
 
     useEffect(() => {
-        const logedEmail = secureLocalStorage.getItem("logiafter");
-        const RoleUser = secureLocalStorage.getItem("loginNew");
+        const logedEmail = secureLocalStorage.getItem("login2");
+        const RoleUser = secureLocalStorage.getItem("login1");
         sendEmail(logedEmail, RoleUser);
     }, [])
 

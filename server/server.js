@@ -122,6 +122,8 @@ app.post('/Login', (req, res) =>{
 app.post('/UnAccess', (req, res) => {
     const email = req.body.email;
     const role = req.body.role;
+
+    console.log(email, role)
 })
 
 //check the server is working
