@@ -17,12 +17,11 @@ const Dashborad = (children) => {
 
     //For all user Side list
     const allUserSide = [
-        {name: "Vehicles", link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Rented Vehicle", link: "#", icon: <Icons name="car-sport" size="large"></Icons>},
-        {name: "Own Vehicle ", link: "#", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>},        
+        {id: 1, name: "Vehicles", link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
+        {id: 2, name: "Rented Vehicle", link: "#", icon: <Icons name="car-sport" size="large"></Icons>},
+        {id: 3, name: "Own Vehicle ", link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {id: 4, name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>},        
     ]
-
     //SuperAdmin Side list
     const SuperAdminSide = [
         {name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>},
@@ -113,14 +112,17 @@ const Dashborad = (children) => {
                             
                             {
                                 allUserSide.map((allside) => {
-                                    return (
-                                        <Link to={allside.link}>
-                                            <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                                                <p>{allside.icon}</p>
-                                                <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{allside.name}</p>                        
-                                            </div>
-                                        </Link>
-                                    )
+                                    if(RoleUser === "buyer"){
+                                        if(allside.id === 1 )
+                                        return (
+                                            <Link to={allside.link}>
+                                                <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                                    <p>{allside.icon}</p>
+                                                    <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{allside.name}</p>                        
+                                                </div>
+                                            </Link>
+                                        )
+                                    }
                                 })
                             }
 
