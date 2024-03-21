@@ -10,7 +10,7 @@ const Vehicles = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "renter" || RoleUser === "buyer"){
-
+        
     }
     else{
         useEffect(() => {
