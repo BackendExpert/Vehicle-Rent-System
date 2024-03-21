@@ -11,7 +11,7 @@ const Vehicles = () => {
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "renter" || RoleUser === "buyer"){
         return (
-            <div>Vehicles</div>
+            <div className="bg-gray-200">Vehicles</div>
         )
     }
     else{
