@@ -117,5 +117,12 @@ app.post('/Login', (req, res) =>{
         }
     })
 })
+
+//unaccess endpoint
+app.post('/UnAccess', (req, res) => {
+    const email = req.body.email;
+    const role = req.body.role;
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
