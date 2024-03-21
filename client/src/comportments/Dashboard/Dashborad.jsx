@@ -34,7 +34,7 @@ const Dashborad = (children) => {
     //-------Side Menus End-------------
     //-------Nav Menus -------------
 
-    //SuperAdmin Navbar
+    //alluser Navbar
     const navBar = [
         {name: "Notifications", link: "#", desc: "notifications", icon: <Icons name="notifications"></Icons>},
         {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},        
