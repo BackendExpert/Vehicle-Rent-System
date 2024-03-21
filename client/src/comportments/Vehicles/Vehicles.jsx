@@ -9,7 +9,7 @@ const Vehicles = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
 
-    if(RoleUser === "" || RoleUser === "" || RoleUser === "" || RoleUser === ""){
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "renter" || RoleUser === "buyer"){
 
     }
     else{
