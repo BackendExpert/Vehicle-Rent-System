@@ -55,7 +55,7 @@ app.post('/register', (req, res) => {
                     var updateTime = new Date();
             
                     //set role as user and is_active = 1
-                    userRole = 'user';
+                    userRole = 'buyer';
                     is_active = 1;
             
                     const sql = "INSERT INTO users(email, username, password, role, create_at, update_at, is_active) VALUES (?)";
