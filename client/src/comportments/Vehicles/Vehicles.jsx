@@ -9,6 +9,12 @@ const Vehicles = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
 
+    if(RoleUser === "" || RoleUser === "" || RoleUser === "" || RoleUser === ""){
+
+    }
+    else{
+        
+    }
   return (
     <div>Vehicles</div>
   )
