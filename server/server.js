@@ -140,7 +140,7 @@ app.post('/UnAccess', (req, res) => {
                 }
                 else{
                     if(result.length == 0){
-                        const sql = "INSERT INTO unaccess(email, role, access_at) VALUES (?)";
+                        const sql = "INSERT INTO unaccess(email, role, access_at) VALUES (?, ?, ?)";
                         const access_at = new Date();
 
                         connection.query(sql, [email, role, access_at], (err, result) =>{
