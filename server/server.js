@@ -152,6 +152,9 @@ app.post('/UnAccess', (req, res) => {
                             }
                         })
                     }
+                    else{
+                        return false
+                    }
                 }
             })
         }
