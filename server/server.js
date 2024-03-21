@@ -122,19 +122,19 @@ app.post('/Login', (req, res) =>{
 app.post('/UnAccess', (req, res) => {
     const email = req.body.email;
     const role = req.body.role;
-    const access_at = new Date();
     // console.log(email, role)
 
     const updateSql = "UPDATE users SET is_active = ? WHERE email = ? ";
     const is_active = 0;
 
-    connection.query(sql, [is_active, email], (err, result) => {
+    connection.query(updateSql, [is_active, email], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
+            // console.log("OK")
             const checkSql = "SELECT * FROM unaccess WHERE email = ?";
-            connection.query(sql, [email], (err, result) => {
+            connection.query(checkSql, [email], (err, result) => {
                 if(err){
                     return res.json({Error: "ERRROR on SERVER 1"})
                 }
