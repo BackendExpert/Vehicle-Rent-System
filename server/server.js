@@ -129,7 +129,22 @@ app.post('/UnAccess', (req, res) => {
     const is_active = 0;
 
     connection.query(sql, [is_active, email], (err, result) => {
-        if()
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            const checkSql = "SELECT * FROM unaccess WHERE email = ?";
+            connection.query(sql, [email], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERRROR on SERVER 1"})
+                }
+                else{
+                    if(result.length == 0){
+                        const sql = "INSERT INTO unaccess(email, role, access_at) VALUES (?)";
+                    }
+                }
+            })
+        }
     })
     
 })
