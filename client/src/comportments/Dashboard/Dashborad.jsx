@@ -49,6 +49,7 @@ const Dashborad = (children) => {
     const headlelogout = () =>{
         localStorage.clear();
         navigate('/')
+        window.location.reload()
     } 
 
     return (

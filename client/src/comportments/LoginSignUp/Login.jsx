@@ -21,13 +21,13 @@ const Login = () => {
             //store token in localstorage
             localStorage.setItem('LoginToken', loginToken)
             
-            //get and store login user role and email
-            const userRole = res.data.LoginUser[0].role;
-            const userEmail = res.data.LoginUser[0].email;
+            // //get and store login user role and email
+            // const userRole = res.data.LoginUser[0].role;
+            // const userEmail = res.data.LoginUser[0].email;
 
-            //store data in localstore so that use secureLocalStorage
-            secureLocalStorage.setItem("Login1", userRole);
-            secureLocalStorage.setItem("login2", userEmail);
+            // //store data in localstore so that use secureLocalStorage
+            // secureLocalStorage.setItem("Login1", userRole);
+            // secureLocalStorage.setItem("login2", userEmail);
 
             //login to system
 
@@ -38,8 +38,18 @@ const Login = () => {
                     navigate('/')
                 }
                 else{
+                    //get and store login user role and email
+                    const userRole = res.data.LoginUser[0].role;
+                    const userEmail = res.data.LoginUser[0].email;
+
+                    //store data in localstore so that use secureLocalStorage
+                    secureLocalStorage.setItem("Login1", userRole);
+                    secureLocalStorage.setItem("login2", userEmail);
                     navigate('/Dashboard');
                 }
+            }
+            else{
+                alert(res.data.Error)
             }
 
         }        
