@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
-function UnauthorizedAccess (){
+function UnAccess (){
     const navigate = useNavigate();
 
     // //check current login user
@@ -31,4 +31,4 @@ function UnauthorizedAccess (){
     
 }
 
-export default UnauthorizedAccess
+export default UnAccess

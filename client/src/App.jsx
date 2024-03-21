@@ -20,7 +20,9 @@ export default function App() {
           and routes of dashbord will assign according to login user role
         */}
         <Route path="/Dashboard" element={<PrivateRoute><Dashborad /></PrivateRoute>} /> 
+
         {/* unauthorized access catch and suspend the unauthorized user*/}
+        <Route path="/unauthorizedAccess" element={<PrivateRoute></PrivateRoute>}
 
         {/* This is Vehicle route this can access by all users */}
         <Route path="/Vehicles" element={<PrivateRoute><Vehicles /></PrivateRoute> } />
