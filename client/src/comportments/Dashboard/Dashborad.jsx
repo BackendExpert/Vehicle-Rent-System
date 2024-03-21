@@ -15,8 +15,8 @@ const Dashborad = (children) => {
 
     //For all user Side list
     const allUserSide = [
-        {name: "Rented Vehicle", link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Own Vehicle ", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Rented Vehicle", link: "#", icon: <Icons name="car-sport" size="large"></Icons>},
+        {name: "Own Vehicle ", link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>},        
     ]
 
@@ -79,15 +79,36 @@ const Dashborad = (children) => {
 
                     <div className="pl-2">
                         {
-                            SuperAdminSide.map((superSide) => (
-                                <Link to={superSide.link}>
-                                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                                        <p>{superSide.icon}</p>
-                                        <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{superSide.name}</p>                        
-                                    </div>
-                                </Link>
-                            ))
-                        }
+                            (() => {
+                                if(RoleUser === "SuperAdmin"){
+                                    return (
+                                        SuperAdminSide.map((superSide) => (
+                                            <Link to={superSide.link}>
+                                                <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                                    <p>{superSide.icon}</p>
+                                                    <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{superSide.name}</p>                        
+                                                </div>
+                                            </Link>
+                                        ))
+                                    )
+                                }
+                                })()
+                            }
+                            
+                            {
+                                allUserSide.map((allside) => {
+                                    return (
+                                        <Link to={allside.link}>
+                                            <div className="flex py-6 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                                <p>{allside.icon}</p>
+                                                <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{allside.name}</p>                        
+                                            </div>
+                                        </Link>
+                                    )
+                                })
+                            }
+
+                        
                     </div>
                 
                 </div>
