@@ -66,9 +66,19 @@ const Dashborad = (children) => {
                                                 <span>SuperAdmin</span>
                                             )
                                         }
-                                        else if(RoleUser === "user"){
+                                        else if(RoleUser === "Admin"){
                                             return (
-                                                <span>User</span>
+                                                <span>Admin</span>
+                                            )
+                                        }
+                                        else if(RoleUser === "renter"){
+                                            return (
+                                                <span>Renter</span>
+                                            )
+                                        }
+                                        else if(RoleUser === "buyer"){
+                                            return (
+                                                <span>Buyer</span>
                                             )
                                         }
                                     })()
