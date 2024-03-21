@@ -125,27 +125,13 @@ app.post('/UnAccess', (req, res) => {
     const access_at = new Date();
     // console.log(email, role)
 
-    const unaccessSql = "INSERT INTO unaccess(email, role, access_at) VALUES (?)";
-    const values = [
-        email,
-        role,
-        access_at
-    ]
+    const updateSql = "UPDATE users SET is_active = ? WHERE email = ? ";
+    const is_active = 0;
 
-    connection.query(sql, [values], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR on Server"})
-        }
-        else{
-            const updateUser = "UPDATE users SET is_active = ? WHERE email = ?";
-            connection.query(sql, [0, email], (err, result) =>{
-                if(err){
-                    return res.json({Error: "ERROR Update"})
-                }
-                
-            })
-        }
+    connection.query(sql, [is_active, email], (err, result) => {
+        if()
     })
+    
 })
 
 //check the server is working
