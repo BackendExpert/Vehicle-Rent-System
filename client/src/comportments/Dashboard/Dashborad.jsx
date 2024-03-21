@@ -1,9 +1,11 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
 
 const Dashborad = (children) => {
+    const navigate = useNavigate() 
+
     //for open and close Side bar
     const [sideOpen, SetsideOpen] = useState();
     const [navOpen, SetNavOpen] = useState();
@@ -32,17 +34,22 @@ const Dashborad = (children) => {
     //-------Nav Menus -------------
 
     //SuperAdmin Navbar
-    const SuperAdminNav = [
+    const navBar = [
         {name: "new User", link: "#"},
         {name: "new User", link: "#"},
         {name: "new User", link: "#"},
         {name: "new User", link: "#"},
-        {name: "new User", link: "#"},
+        {name: "Logout", desc: "logout"},
         
     ]
 
     //-------Nav Menus End -------------
 
+    //headlelogout
+    const headlelogout = () =>{
+        localStorage.clear();
+        navigate('/')
+    } 
 
     return (
         <div className="bg-gray-200 py-6">
@@ -123,12 +130,19 @@ const Dashborad = (children) => {
                         <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all lg:mt-0 mt-12 ${navOpen ? 'lg:visible':'lg:visible invisible'}`}>
 
                             {
-                                SuperAdminNav.map((superNav) => {
-                                    return (
-                                        <Link to={superNav.link}>
-                                            <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{superNav.name}</div>
-                                        </Link>                            
-                                    )
+                                navBar.map((nav) => {
+                                    if(nav.desc === "logout"){
+                                        return (
+                                            <div onClick={headlelogout} className="cursor-pointer text-red-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                                        )
+                                    }
+                                    else{
+                                        return (
+                                            <Link to={nav.link}>
+                                                <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                                            </Link>                            
+                                        )
+                                    }
                                 })
                             }
                         </div>
