@@ -35,9 +35,6 @@ const Dashborad = (children) => {
 
     //SuperAdmin Navbar
     const navBar = [
-        {name: "new User", link: "#"},
-        {name: "new User", link: "#"},
-        {name: "new User", link: "#"},
         {name: "Notifications", link: "#", icon: <Icons name="notifications"></Icons>},
         {name: "Logout", desc: "logout", icon: <Icons name="power"></Icons>},
         
@@ -134,7 +131,10 @@ const Dashborad = (children) => {
                                 navBar.map((nav) => {
                                     if(nav.desc === "logout"){
                                         return (
-                                            <div onClick={headlelogout} className="cursor-pointer text-red-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                                            <div onClick={headlelogout} className="flex cursor-pointer text-red-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">
+                                                <p className="">{nav.icon}</p>
+                                                <p className="pl-2">{nav.name}</p>
+                                            </div>
                                         )
                                     }
                                     else{
