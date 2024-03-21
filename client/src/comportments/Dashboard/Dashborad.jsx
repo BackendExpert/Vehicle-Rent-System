@@ -25,7 +25,7 @@ const Dashborad = (children) => {
         {name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>},
         {name: "Vehicles", link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Report", link: "#", icon: <Icons name="document-text" size="large"></Icons>},
-        {name: "Suspended Users", link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Suspended Users", link: "#", icon: <Icons name="person-circle" size="large"></Icons>},
     ]
 
     //-------Side Menus End-------------
