@@ -63,8 +63,12 @@ const DashSummary = () => {
                         }
                     </div>
                 </div>
-                <div className="my-8 mx-2">  
+                <div className="my-8 mx-2">
+
                     <div className="lg:grid grid-cols-2 gap-4">
+                    <div className="shadow-md rounded-lg bg-white py-6 px-4">
+                        <h1 className="">My Info</h1>
+                    </div>  
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -95,9 +99,8 @@ const DashSummary = () => {
                                             $2999
                                         </td>
                                         <td class="px-6 py-4">
-                                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
                                             <Link>
-                                                <button className="py-2 px-1 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View</button>
+                                                <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View</button>
                                             </Link>
                                         </td>
                                     </tr>                                
