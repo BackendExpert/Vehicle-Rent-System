@@ -55,7 +55,7 @@ const Dashborad = (children) => {
             <div className="flex">
                 <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-2 mx-2 rounded bg-white h-auto pl-4 py-4 ${sideOpen ? "w-64" : "w-20" }`}>
                     <div className="flex">
-                    <div className="text-[#3B71CA] pt-1" onClick={() => SetsideOpen(!sideOpen)}>{sideOpen ? <Icons size="large" name="close"></Icons> : <Icons size="large" name="menu"></Icons>}</div>
+                        <div className="text-[#3B71CA] pt-1" onClick={() => SetsideOpen(!sideOpen)}>{sideOpen ? <Icons size="large" name="close"></Icons> : <Icons size="large" name="menu"></Icons>}</div>
                         {/* <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!sideOpen && 'scale-0'}`}>SuperAdmin</div>                     */}
                     </div>
                     <div className="">
@@ -71,8 +71,10 @@ const Dashborad = (children) => {
                         </Link>
                     </div>
                     <hr className="mt-2 mr-4 border-b-1 border-blue-300"/>
+
+                    Users
                 </div>
-                
+
 
                 </div>
             </div>
