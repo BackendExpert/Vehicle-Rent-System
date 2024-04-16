@@ -70,7 +70,13 @@ const DashSummary = () => {
                             <h1 className="">My Info</h1>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
+                                    <div className="">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
+                                    </div>
+                                    <div className="">
+                                        Name : Jehan
+                                        Email : jehan@123.com
+                                    </div>
                                 </div>
                             </div>
                         </div>  
