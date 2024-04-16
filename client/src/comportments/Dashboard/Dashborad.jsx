@@ -12,6 +12,9 @@ const Dashborad = (children) => {
 
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
+    const EmailUser = secureLocalStorage.getItem("Login2");
+    
+
     // alert(RoleUser)
     //-------Side Menus -------------
 
