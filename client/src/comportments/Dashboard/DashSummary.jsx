@@ -100,7 +100,7 @@ const DashSummary = () => {
                 </div>
                 <h1 className="px-8 py-8 text-xl font-semibold">Personal Data</h1>
                 <div className="mb-8 mx-2">
-                    <div className="lg:flex">
+                    <div className="lg:grid grid-cols-2 gap-4">
                         <div className="w-full shadow-md rounded-lg bg-white py-6 px-4 lg:mr-5 mr-0 lg:my-0 my-2">
                             <h1 className="">My Info</h1>
                             <div className="lg:grid grid-cols-2 gap-4">
@@ -124,36 +124,36 @@ const DashSummary = () => {
                                 </div>
                             </div>
                         </div>  
-                        <div class="shadow-md rounded-lg w-full">
-                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <div className="shadow-md rounded-lg w-full">
+                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Trip
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Vehicle
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             Cost
                                         </th>
-                                        <th scope="col" class="px-6 py-3">
+                                        <th scope="col" className="px-6 py-3">
                                             View
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             Colombo
                                         </th>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             KN-4775
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             $2999
                                         </td>
-                                        <td class="px-6 py-4">
+                                        <td className="px-6 py-4">
                                             <Link>
                                                 <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View</button>
                                             </Link>
