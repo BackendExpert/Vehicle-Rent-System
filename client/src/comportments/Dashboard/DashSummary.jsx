@@ -132,7 +132,11 @@ const DashSummary = () => {
                     <h1 className="px-8 py-8 text-xl font-semibold">Newly Added</h1>   
 
                     <div className="mb-8 mx-2">
-                            
+                       <div className="lg:flex">
+                            <div className="bg-white rounded">
+                                <img src="" alt="" srcset="" />
+                            </div> 
+                       </div>     
                     </div>          
 
 
