@@ -91,8 +91,9 @@ const Dashborad = (children) => {
                                 navBar.map((nav) => {
                                     if(nav.desc === "logout"){
                                         return (
-                                            <div onClick={headlelogout()} className="px-2 text-red-500">
-                                                {nav.icon}
+                                            <div onClick={headlelogout} className="px-2 text-red-500 flex cursor-pointer">
+                                                <p>{nav.name}</p>
+                                                <p className="pl-2 pt-[2px]">{nav.icon}</p>                                               
                                             </div>
                                         )
                                     }
