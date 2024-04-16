@@ -12,7 +12,9 @@ const DashSummary = () => {
 
     if(RoleUser !== null){
         return (
-            <div>DashSummary</div>
+            <div className="bg-white mt-4">
+                asd
+            </div>
         )
     }
     else{
