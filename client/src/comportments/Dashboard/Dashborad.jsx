@@ -61,7 +61,7 @@ const Dashborad = (children) => {
                         </div> : <div></div>}
                     </div>
                     <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
-                        <Link to={'/superAdmin'}>
+                        <Link to={'/Dashboard'}>
                             {sideOpen ? <div className="flex pl-2 pt-2">
                                 <p className="">SuperAdmin</p>
                             </div> : <Icons name="speedometer"></Icons> }
@@ -70,13 +70,13 @@ const Dashborad = (children) => {
                     <hr className="mt-2 mr-4 border-b-1 border-blue-300"/>
 
                     
-                    <div className="pl-1">
+                    <div className="">
                         {
                             allUserSide.map((sidem) => (
                                 <Link to={sidem.link}>
-                                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                    <div className="flex py-2 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
                                         <p>{sidem.icon}</p>
-                                        <p className={`pt-1 pl-2 ${!sideOpen && 'scale-0'}`}>{sidem.name}</p>                        
+                                        <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{sidem.name}</p>                        
                                     </div>
                                 </Link>
                             ))
