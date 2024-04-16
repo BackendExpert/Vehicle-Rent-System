@@ -53,7 +53,7 @@ const DashSummary = () => {
                         {
                             dataCount.map((data) => {
                                 return (                                    
-                                    <div className={`text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 ${data.style}`}>                                       
+                                    <div className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${data.style}`}>                                       
                                         <p className="font-semibold text-xl">{data.icon}</p>   
                                         <p className="font-semibold pl-2 pt-2">{data.name}</p>
                                         <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
@@ -62,6 +62,10 @@ const DashSummary = () => {
                             })
                         }
                     </div>
+                </div>
+                <div className="bg-white rounded pr-5 shadow-xl mt-8 py-12 text-center">
+                    &copy; VRS - Vehicle rental System <br />
+                    Developed and Design by JehanKandy
                 </div>
             </div>
         )
