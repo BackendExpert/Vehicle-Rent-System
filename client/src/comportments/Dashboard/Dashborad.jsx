@@ -84,7 +84,22 @@ const Dashborad = (children) => {
                     </div>
                 </div>
                 <div className="h-full py-4 rounded bg-white my-1 px-4 w-full mr-2">
-                    navbar here
+                    <div className="flex justify-between">
+                        <p className="">VRS</p>
+                        <div className="flex ">
+                            {
+                                navBar.map((nav) => {
+                                    if(nav.desc === "logout"){
+                                        return (
+                                            <div onClick={headlelogout()} className="px-2 text-red-500">
+                                                {nav.icon}
+                                            </div>
+                                        )
+                                    }
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
 
 
