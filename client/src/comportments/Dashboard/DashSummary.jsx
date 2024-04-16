@@ -63,20 +63,29 @@ const DashSummary = () => {
                         }
                     </div>
                 </div>
-                <div className="my-8 mx-2">
-
+                <h1 className="px-8 py-8 text-xl font-semibold">Personal Data</h1>
+                <div className="mb-8 mx-2">
                     <div className="lg:flex">
                         <div className="w-full shadow-md rounded-lg bg-white py-6 px-4 lg:mr-5 mr-0 lg:my-0 my-2">
                             <h1 className="">My Info</h1>
                             <div className="lg:grid grid-cols-2 gap-4">
-                                <div className="">
+                                <div className="mx-4 my-6">
                                     <div className="">
                                         <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
                                     </div>
                                     <div className="">
-                                        <p className="">Name : Jehan </p>
-                                        <p className="">Email : jehan@123.com</p>
+                                        <p className="py-2">Name : Jehan </p>
+                                        <p className="py-2">Email : jehan@123.com</p>
                                     </div>
+                                </div>
+                                <div className="">
+                                    <p className="py-2">Name : Jehan </p>
+                                    <p className="py-2">Address : kandy</p>
+                                    <p className="py-2">Name : Jehan </p>
+                                    <p className="py-2">Address : kandy</p>
+                                    <Link>
+                                        <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">More</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>  
@@ -118,7 +127,13 @@ const DashSummary = () => {
                                 </tbody>
                             </table>
                         </div>
-                    </div>                
+                    </div>  
+
+                    <h1 className="px-8 py-8 text-xl font-semibold">Newly Added</h1>   
+
+                    <div className="mb-8 mx-2">
+                            
+                    </div>          
 
 
                 </div>
