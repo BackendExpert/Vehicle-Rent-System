@@ -51,7 +51,9 @@ const Dashborad = (children) => {
     return (
         <div className="bg-gray-200 py-6 h-auto">
             <div className="flex">
-                
+                <div className="w-auto bg-white">
+                    SuperAdmin
+                </div>
             </div>
         </div>
         
