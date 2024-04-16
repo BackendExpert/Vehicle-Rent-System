@@ -133,7 +133,7 @@ const DashSummary = () => {
 
                     <div className="mb-8 mx-2">
                        <div className="lg:flex">
-                            <div className="bg-white rounded">
+                            <div className="bg-white rounded mx-8 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
@@ -147,7 +147,7 @@ const DashSummary = () => {
                                     </Link>
                                 </div>
                             </div> 
-                            <div className="bg-white rounded">
+                            <div className="bg-white rounded mx-8 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
@@ -161,7 +161,7 @@ const DashSummary = () => {
                                     </Link>
                                 </div>
                             </div> 
-                            <div className="bg-white rounded">
+                            <div className="bg-white rounded mx-8 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
