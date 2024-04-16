@@ -11,8 +11,8 @@ const DashSummary = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const dataCount = [
-        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: ""},
-        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: ""},        
+        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
+        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-green-500"},        
     ]
 
     if(RoleUser !== null){
@@ -45,10 +45,10 @@ const DashSummary = () => {
                 
                 <div className="mt-4 rounded pr-5">
                     <div className="lg:flex">
-                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2">
+                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2">
                             Hi all
                         </div>
-                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2">
+                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2">
                             Hi all
                         </div>
                     </div>
