@@ -132,12 +132,6 @@ const DashSummary = () => {
                                             Trip
                                         </th>
                                         <th scope="col" className="px-6 py-3">
-                                            Vehicle
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Cost
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
                                             View
                                         </th>
                                     </tr>
@@ -147,12 +141,6 @@ const DashSummary = () => {
                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             Colombo
                                         </th>
-                                        <td className="px-6 py-4">
-                                            KN-4775
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            $2999
-                                        </td>
                                         <td className="px-6 py-4">
                                             <Link>
                                                 <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View</button>
@@ -166,9 +154,9 @@ const DashSummary = () => {
 
                     <h1 className="px-8 py-8 text-xl font-semibold">Newly Added</h1>   
 
-                    <div className="mb-8 mx-2">
+                    <div className="mb-8 mx-0">
                        <div className="lg:flex">
-                            <div className="bg-white rounded mx-8 shadow-xl">
+                            <div className="bg-white rounded lg:mx-8 mx-0 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
@@ -182,7 +170,7 @@ const DashSummary = () => {
                                     </Link>
                                 </div>
                             </div> 
-                            <div className="bg-white rounded mx-8 shadow-xl">
+                            <div className="bg-white rounded lg:mx-8 mx-0 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
@@ -196,7 +184,7 @@ const DashSummary = () => {
                                     </Link>
                                 </div>
                             </div> 
-                            <div className="bg-white rounded mx-8 shadow-xl">
+                            <div className="bg-white rounded lg:mx-8 mx-0 shadow-xl">
                                 <div className="px-4 -my-4">
                                     <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
                                 </div>
