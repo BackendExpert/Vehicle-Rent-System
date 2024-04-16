@@ -70,14 +70,14 @@ const Dashborad = (children) => {
                     <hr className="mt-2 mr-4 border-b-1 border-blue-300"/>
 
                     
-                    <div className="pl-2">
+                    <div className="pl-1">
                         {
-                            sidemenu.map((sidem) => (
+                            allUserSide.map((sidem) => (
                                 <Link to={sidem.link}>
-                                <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                                    <p>{sidem.icon}</p>
-                                    <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
-                                </div>
+                                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                        <p>{sidem.icon}</p>
+                                        <p className={`pt-1 pl-2 ${!sideOpen && 'scale-0'}`}>{sidem.name}</p>                        
+                                    </div>
                                 </Link>
                             ))
                         }
