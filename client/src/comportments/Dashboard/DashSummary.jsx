@@ -17,7 +17,9 @@ const DashSummary = () => {
         {id: 3, name: "Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-yellow-500"},      
         {id: 4, name: "Suspended Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-red-500"},
         {id: 5, name: "User Requests", link: "#", value: <CountUp end={20}/>, icon: <Icons name="help-circle" size="large"></Icons>, style: "text-blue-500"},
-        {id: 6, name: "User Reports", link: "#", value: <CountUp end={20}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "text-yellow-500"},         
+        {id: 6, name: "User Reports", link: "#", value: <CountUp end={20}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "text-yellow-500"}, 
+        {id: 7, name: "My Income", link: "#", value: <CountUp end={20}/>, icon: <Icons name="cash" size="large"></Icons>, style: "text-yellow-500"}, 
+                
     ]
 
     if(RoleUser !== null){
@@ -52,13 +54,26 @@ const DashSummary = () => {
                     <div className="lg:grid grid-cols-4 gap-4">
                         {
                             dataCount.map((data) => {
-                                return (                                    
-                                    <div className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${data.style}`}>                                       
-                                        <p className="font-semibold text-xl">{data.icon}</p>   
-                                        <p className="font-semibold pl-2 pt-2">{data.name}</p>
-                                        <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
-                                    </div>                                    
-                                )
+                                if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+                                    return (                                    
+                                        <div className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${data.style}`}>                                       
+                                            <p className="font-semibold text-xl">{data.icon}</p>   
+                                            <p className="font-semibold pl-2 pt-2">{data.name}</p>
+                                            <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
+                                        </div>                                    
+                                    )
+                                }
+                                if(RoleUser === "renter"){
+                                    if(data.id === 1 || data.id === 2 || data.id === 7){
+                                        return (                                    
+                                            <div className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${data.style}`}>                                       
+                                                <p className="font-semibold text-xl">{data.icon}</p>   
+                                                <p className="font-semibold pl-2 pt-2">{data.name}</p>
+                                                <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
+                                            </div>                                    
+                                        )
+                                    }
+                                }
                             })
                         }
                     </div>
