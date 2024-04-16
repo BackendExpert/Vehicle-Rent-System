@@ -134,7 +134,13 @@ const DashSummary = () => {
                     <div className="mb-8 mx-2">
                        <div className="lg:flex">
                             <div className="bg-white rounded">
-                                <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" />
+                                <div className="px-4 -my-4">
+                                    <img src="https://wallpapercave.com/wp/wp9209385.jpg" alt="" srcset="" className="w-auto h-44 rounded shadow-2xl"/>
+                                </div>
+                                <div className="my-8">
+                                    <h1>Model : BMW</h1>
+                                    <p className="">Owner : Jehan</p>
+                                </div>
                             </div> 
                        </div>     
                     </div>          
