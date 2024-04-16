@@ -83,7 +83,7 @@ const Dashborad = (children) => {
                         }
                     </div>
                 </div>
-                <div className="h-full py-4 rounded bg-white">
+                <div className="h-full py-4 rounded bg-white my-1">
                     navbar here
                 </div>
 
