@@ -140,7 +140,9 @@ const Dashborad = (children) => {
                             }
                         </div>
                     </div>
+
                     <div className="w-full mr-2">
+                        {/* nav bar start */}
                         <div className="py-4 rounded bg-white my-1 px-4 w-full mr-2">
                             
                             <div className="flex justify-between">
@@ -161,6 +163,7 @@ const Dashborad = (children) => {
                                 </div>
                             </div>                      
                         </div>
+                        {/* navbar ENd */}
                         <DashSummary />
                     </div>
     
