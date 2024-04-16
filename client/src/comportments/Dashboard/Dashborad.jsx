@@ -67,7 +67,31 @@ const Dashborad = (children) => {
                     <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                         <Link to={'/Dashboard'}>
                             {sideOpen ? <div className="flex pl-2 pt-2">
-                                <p className="">SuperAdmin</p>
+                                {
+                                    (() => {
+                                        if(RoleUser === "SuperAdmin"){
+                                            return (
+                                                <p className="">SuperAdmin</p>
+                                            )                            
+                                        }
+                                        else if(RoleUser === "Admin"){
+                                            return (                                               
+                                                <p className="">Admin</p>
+                                            )    
+                                        }
+                                        else if(RoleUser === "renter"){
+                                            return (                                                
+                                                <p className="">Renter</p>
+                                            )    
+                                        }
+                                        else if(RoleUser === "buyer"){
+                                            return (
+                                                <p className="">Buyer</p>
+                                            )    
+                                        }
+                                    })()
+                                }
+                                
                             </div> : <Icons name="speedometer"></Icons> }
                         </Link>
                     </div>
