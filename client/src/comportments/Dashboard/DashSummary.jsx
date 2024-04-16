@@ -88,6 +88,17 @@ const DashSummary = () => {
                                         )
                                     }
                                 }
+                                if(RoleUser === "buyer"){
+                                    if(data.id === 1 || data.id === 8){
+                                        return (                                    
+                                            <div className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${data.style}`}>                                       
+                                                <p className="font-semibold text-xl">{data.icon}</p>   
+                                                <p className="font-semibold pl-2 pt-2">{data.name}</p>
+                                                <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
+                                            </div>                                    
+                                        )
+                                    }
+                                }
                             })
                         }
                     </div>
