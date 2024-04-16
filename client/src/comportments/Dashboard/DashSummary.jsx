@@ -65,7 +65,7 @@ const DashSummary = () => {
                 </div>
                 <div className="my-8 mx-2">
 
-                    <div className="flex">
+                    <div className="lg:flex">
                     <div className="shadow-md rounded-lg bg-white py-6 px-4 mr-5">
                         <h1 className="">My Info</h1>
                         <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident laudantium vitae molestiae. Culpa enim voluptate optio ipsum et fuga, cupiditate porro earum eveniet autem, mollitia non aliquid fugiat adipisci quam.</p>
