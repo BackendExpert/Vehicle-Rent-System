@@ -10,10 +10,16 @@ const DashSummary = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    if(RoleUser !== null){
+        return (
+            <div>DashSummary</div>
+        )
+    }
+    else{
+        localStorage.clear()
+        navigate('/')
+    }
 
-  return (
-    <div>DashSummary</div>
-  )
 }
 
 export default DashSummary
