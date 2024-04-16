@@ -2,6 +2,7 @@ import Icons from "@reacticons/ionicons"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
+import CountUp from 'react-countup';
 
 const DashSummary = () => {
     const navigate = useNavigate() 
@@ -11,8 +12,8 @@ const DashSummary = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const dataCount = [
-        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "text-red-500"},
-        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},        
+        {id: 1, name: "Rented Vehicles", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-red-500"},
+        {id: 2, name: "My Vehicles", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},        
     ]
 
     if(RoleUser !== null){
