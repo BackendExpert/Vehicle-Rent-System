@@ -43,7 +43,7 @@ const DashSummary = () => {
                     })()
                 }
                 
-                <div className="mt-4 rounded px-4">
+                <div className="mt-4 rounded pr-5">
                     <div className="lg:flex">
                         <div className="bg-green-500 rounded py-8 px-8 w-full mx-2">
                             Hi all
