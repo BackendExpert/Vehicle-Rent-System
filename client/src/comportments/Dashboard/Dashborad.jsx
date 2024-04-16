@@ -87,27 +87,33 @@ const Dashborad = (children) => {
                         }
                     </div>
                 </div>
-                <div className="h-full py-4 rounded bg-white my-1 px-4 w-full mr-2">
-                    <div className="flex justify-between">
-                        <p className="">VRS</p>
-                        <div className="flex ">
-                            {
-                                navBar.map((nav) => {
-                                    if(nav.desc === "logout"){
-                                        return (
-                                            <div onClick={headlelogout} className="px-2 text-red-500 flex cursor-pointer">
-                                                <p>{nav.name}</p>
-                                                <p className="pl-2 pt-[2px]">{nav.icon}</p>                                               
-                                            </div>
-                                        )
-                                    }
-                                })
-                            }
-                        </div>
+                <div className="w-full mx-1">
+                    <div className="py-4 rounded bg-white my-1 px-4 w-full mr-2">
+                        
+                        <div className="flex justify-between">
+                            <p className="">VRS</p>
+                            <div className="flex ">
+                                {
+                                    navBar.map((nav) => {
+                                        if(nav.desc === "logout"){
+                                            return (
+                                                <div onClick={headlelogout} className="px-2 text-red-500 flex cursor-pointer">
+                                                    <p>{nav.name}</p>
+                                                    <p className="pl-2 pt-[2px]">{nav.icon}</p>                                               
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                            </div>
+                        </div>                      
                     </div>
-                </div>              
                 </div>
-                <DashSummary />
+
+
+                    
+                </div>
+                
             </div>
 
         
