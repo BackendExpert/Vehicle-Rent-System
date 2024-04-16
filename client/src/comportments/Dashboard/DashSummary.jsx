@@ -10,6 +10,11 @@ const DashSummary = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    const dataCount = [
+        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: ""},
+        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: ""},        
+    ]
+
     if(RoleUser !== null){
         return (
             <div className="py-4">
@@ -38,7 +43,7 @@ const DashSummary = () => {
                     })()
                 }
                 
-                <div className="bg-white mt-4 rounded px-4">
+                <div className="mt-4 rounded px-4">
                     asd
                 </div>
             </div>
