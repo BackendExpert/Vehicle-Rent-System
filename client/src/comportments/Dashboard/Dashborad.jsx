@@ -26,10 +26,6 @@ const Dashborad = (children) => {
         {id: 7, name: "Report", link: "#", icon: <Icons name="document-text" size="large"></Icons>},
         {id: 8, name: "Suspended", link: "#", icon: <Icons name="person-circle" size="large"></Icons>},        
     ]
-    //SuperAdmin Side list
-    const SuperAdminSide = [
-
-    ]
 
     //-------Side Menus End-------------
     //-------Nav Menus -------------
