@@ -66,11 +66,15 @@ const DashSummary = () => {
                 <div className="my-8 mx-2">
 
                     <div className="lg:flex">
-                    <div className="shadow-md rounded-lg bg-white py-6 px-4 mr-5">
-                        <h1 className="">My Info</h1>
-                        <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident laudantium vitae molestiae. Culpa enim voluptate optio ipsum et fuga, cupiditate porro earum eveniet autem, mollitia non aliquid fugiat adipisci quam.</p>
-                    </div>  
-                        <div class="shadow-md sm:rounded-lg w-full">
+                        <div className="w-full shadow-md rounded-lg bg-white py-6 px-4 lg:mr-5 mr-0 lg:my-0 my-2">
+                            <h1 className="">My Info</h1>
+                            <div className="lg:grid grid-cols-2 gap-4">
+                                <div className="">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="shadow-md rounded-lg w-full">
                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
