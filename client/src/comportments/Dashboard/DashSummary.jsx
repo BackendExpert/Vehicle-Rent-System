@@ -18,7 +18,7 @@ const DashSummary = () => {
         {id: 4, name: "Suspended Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-red-500"},
         {id: 5, name: "User Requests", link: "#", value: <CountUp end={20}/>, icon: <Icons name="help-circle" size="large"></Icons>, style: "text-blue-500"},
         {id: 6, name: "User Reports", link: "#", value: <CountUp end={20}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "text-yellow-500"}, 
-        {id: 7, name: "My Income", link: "#", value: <CountUp end={20}/>, icon: <Icons name="cash" size="large"></Icons>, style: "text-yellow-500"}, 
+        {id: 7, name: "My Income", link: "#", value: <CountUp end={20}/>, icon: <Icons name="cash" size="large"></Icons>, style: "text-green-500"}, 
                 
     ]
 
