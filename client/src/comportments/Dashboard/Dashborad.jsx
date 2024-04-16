@@ -108,6 +108,7 @@ const Dashborad = (children) => {
                             </div>
                         </div>                      
                     </div>
+                    <DashSummary />
                 </div>
 
 
