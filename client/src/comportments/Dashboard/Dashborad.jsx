@@ -49,10 +49,10 @@ const Dashborad = (children) => {
     } 
 
     return (
-        <div className="bg-gray-200 py-6 h-auto">
+        <div className="bg-gray-200 py-2 h-auto">
             <div className="flex">
-                <div className="w-auto bg-white">
-                    SuperAdmin
+                <div className="w-auto bg-white ml-2 px-4 py-5 rounded">
+                    <div className="">SuperAdmin</div>
                 </div>
             </div>
         </div>
