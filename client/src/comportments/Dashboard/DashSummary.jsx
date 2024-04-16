@@ -11,8 +11,8 @@ const DashSummary = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const dataCount = [
-        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
-        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-green-500"},        
+        {id: 1, name: "Rented Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "text-red-500"},
+        {id: 2, name: "My Vehicles", link: "#", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},        
     ]
 
     if(RoleUser !== null){
@@ -45,12 +45,21 @@ const DashSummary = () => {
                 
                 <div className="mt-4 rounded pr-5">
                     <div className="lg:flex">
-                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2">
-                            Hi all
-                        </div>
-                        <div className="bg-green-500 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2">
-                            Hi all
-                        </div>
+                        {
+                            dataCount.map((data) => {
+                                return (
+                                    <div className={`shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 ${data.style}`}>
+                                       <div className="flex justify-between">
+                                            <div className="flex">
+                                                <p className="font-semibold text-xl">{data.icon}</p>   
+                                                <p className="font-semibold text-xl pl-2 pt-2">{data.name}</p>
+                                            </div>
+                                            <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>                                                                                      
+                                       </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
