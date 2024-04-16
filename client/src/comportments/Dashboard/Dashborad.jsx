@@ -54,7 +54,7 @@ const Dashborad = (children) => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className="bg-gray-200 py-2 h-auto w-auto">
+            <div className="bg-gray-200 py-2 h-auto w-full">
                 <div className="flex">
                     <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-1 mx-2 rounded bg-white h-auto pl-4 py-4 ${sideOpen ? "w-64" : "w-20" }`}>
                         <div className="flex">
