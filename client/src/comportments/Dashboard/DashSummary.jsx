@@ -74,8 +74,8 @@ const DashSummary = () => {
                                         <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
                                     </div>
                                     <div className="">
-                                        Name : Jehan
-                                        Email : jehan@123.com
+                                        <p className="">Name : Jehan </p>
+                                        <p className="">Email : jehan@123.com</p>
                                     </div>
                                 </div>
                             </div>
