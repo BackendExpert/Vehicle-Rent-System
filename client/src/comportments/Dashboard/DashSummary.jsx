@@ -12,12 +12,12 @@ const DashSummary = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const dataCount = [
-        {id: 1, name: "Rented Vehicles", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-red-500"},
+        {id: 1, name: "Rented Vehicles", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-purple-500"},
         {id: 2, name: "My Vehicles", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},     
-        {id: 3, name: "Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},      
-        {id: 4, name: "Suspended Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},
-        {id: 4, name: "User Requests", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},
-        {id: 4, name: "User Reports", link: "#", value: <CountUp end={20}/>, icon: <Icons name="car" size="large"></Icons>, style: "text-green-500"},         
+        {id: 3, name: "Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-yellow-500"},      
+        {id: 4, name: "Suspended Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-red-500"},
+        {id: 5, name: "User Requests", link: "#", value: <CountUp end={20}/>, icon: <Icons name="help-circle" size="large"></Icons>, style: "text-blue-500"},
+        {id: 6, name: "User Reports", link: "#", value: <CountUp end={20}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "text-yellow-500"},         
     ]
 
     if(RoleUser !== null){
@@ -49,21 +49,15 @@ const DashSummary = () => {
                 }
                 
                 <div className="mt-4 rounded pr-5">
-                    <div className="lg:flex">
+                    <div className="lg:grid grid-cols-4 gap-4">
                         {
                             dataCount.map((data) => {
-                                return (
-                                    <div className={`shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 ${data.style}`}>
-                                       <div className="lg:grid grid-cols-2 gap-4">
-                                            <div className="">
-                                                <div className="flex">
-                                                    <p className="font-semibold text-xl">{data.icon}</p>   
-                                                    <p className="font-semibold pl-2 pt-2">{data.name}</p>
-                                                </div>
-                                                <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
-                                            </div>                                                                                      
-                                       </div>
-                                    </div>
+                                return (                                    
+                                    <div className={`text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 ${data.style}`}>                                       
+                                        <p className="font-semibold text-xl">{data.icon}</p>   
+                                        <p className="font-semibold pl-2 pt-2">{data.name}</p>
+                                        <p className="font-semibold text-3xl pl-2 pt-1">{data.value}</p>
+                                    </div>                                    
                                 )
                             })
                         }
