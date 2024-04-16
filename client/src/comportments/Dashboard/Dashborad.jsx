@@ -111,6 +111,18 @@ const Dashborad = (children) => {
                                         </Link>
                                     )
                                 }
+                                if(RoleUser === "renter"){
+                                    if(sidem.id === 1 || sidem.id === 2 || sidem.id === 4){
+                                        return (
+                                            <Link to={sidem.link}>
+                                                <div className="flex py-2 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                                    <p>{sidem.icon}</p>
+                                                    <p className={`pt-2 pl-2 ${!sideOpen && 'scale-0'}`}>{sidem.name}</p>                        
+                                                </div>
+                                            </Link>
+                                        )
+                                    }
+                                }
                                 if(RoleUser === "buyer"){
                                     if(sidem.id === 1 || sidem.id === 2 || sidem.id === 4){
                                         return (
